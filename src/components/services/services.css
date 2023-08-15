@@ -10,7 +10,7 @@
     border: 1px solid var(--color-primary);
     height: fit-content;
     transition: var(--transition);
-} 
+}
 
 .services:hover {
     background: transparent;
@@ -35,7 +35,7 @@
     padding: 2rem;
 }
 
-.service__list-li {
+.service__list li {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.8rem;
@@ -45,9 +45,30 @@
 .service__list-icon {
     color: var(--color-primary);
     margin-right: 8px;
-    align-self: center;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    margin-top: 6px;
 }
 
 .service__list p {
     font-size: 0.9rem;
+}
+
+/* =========== Media Queries (medium divices) =========== */
+@media screen and (max-width: 1024px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .services {
+        height: auto;
+    }
+}
+
+/* =========== Media Queries (small divices) =========== */
+@media screen and (max-width: 600px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
